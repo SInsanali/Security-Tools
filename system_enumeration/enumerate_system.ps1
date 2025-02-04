@@ -3,7 +3,7 @@
 # GitHub: https://github.com/SInsanali
 
 # Configuration
-$homedir = "$env:USERPROFILE"
+$homedir = "$env:USERPROFILE\Desktop"
 $outputDir = "$homedir\System_Info_Collection"
 $zipDir = "$homedir\$($env:COMPUTERNAME)_System_Info"
 $zipFile = "$homedir\$($env:COMPUTERNAME)_System_Info.zip"
