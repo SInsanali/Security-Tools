@@ -1,16 +1,3 @@
-##################################################################################################
-##################################################################################################
-# Created by Sam Insanali
-# GitHub: https://github.com/SInsanali
-##################################################################################################
-##################################################################################################
-# Description:
-# This script automates the installation of Evaluate-STIG and MOST of its dependencies.
-
-##################################################################################################
-##################################################################################################
-
-
 #!/bin/bash
 
 # Define colors for output
@@ -55,7 +42,7 @@ echo -e "${GREEN}[ ✔ ] Evaluate-STIG installed successfully!${RESET}"
 
 # Test prerequisites
 echo -e "${GREEN}[ + ] Testing prerequisites...${RESET}"
-/opt/Evaluate-STIG/Evaluate-STIG/Prequisites/Test-Prequisites.sh
+/opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/Test-Prerequisites.sh
 
 # Check for required packages
 echo -e "${GREEN}[ + ] Checking for required packages...${RESET}"
