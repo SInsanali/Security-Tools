@@ -30,8 +30,6 @@ chmod +x /opt/powershell/pwsh
 # Create a symbolic link to the PowerShell executable
 ln -sf /opt/powershell/pwsh /usr/bin/pwsh
 
-#echo -e "${GREEN}[ ✔ ] Symbolic link created for PowerShell.${RESET}"
-
 # Verify PowerShell installation
 if command -v pwsh &>/dev/null; then
     echo -e "\n${GREEN}[ ✔ ] PowerShell installed successfully!${RESET}"
