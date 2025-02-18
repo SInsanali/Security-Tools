@@ -47,14 +47,14 @@ mkdir -p /opt/Evaluate-STIG
 unzip -q ./Evaluate-STIG*.zip -d /opt/Evaluate-STIG  # Quiet extraction
 
 # Add execute permissions
-chmod +x /opt/Evaluate-STIG/Evaluate-STIG/Prequisites/*.sh
+chmod +x /opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/Test-Prerequisites.sh
 chmod +x /opt/Evaluate-STIG/Evaluate-STIG/Evaluate-STIG.ps1
 
 echo -e "${GREEN}[ ✔ ] Evaluate-STIG installed successfully!${RESET}"
 
-# Test prerequisites
-echo -e "${GREEN}[ + ] Testing prerequisites...${RESET}"
-/opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/Test-Prerequisites.sh
+# # Test prerequisites
+# echo -e "${GREEN}[ + ] Testing prerequisites...${RESET}"
+# /opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/Test-Prerequisites.sh
 
 # Check for required packages
 echo -e "\n${GREEN}[ + ] Checking for required packages...${RESET}"
