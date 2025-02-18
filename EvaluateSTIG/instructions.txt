@@ -1,0 +1,17 @@
+- cd to this directory to run the installation scripts
+- Ensure you are running these scripts with elevated permissions
+- Ensure both shell scripts have execute permission
+
+# To add permissions: 
+"chmod +x script_name.sh"
+
+- Run install_evaluate-stig_and_powershell.sh first
+- If dependencies are missing, run the eval_stig_dependency_check.sh script
+- If your machine is not connected to a package repository you can manually install the packages located in rhel_dependencies based on your OS. 
+
+# To manually install pacakge from rhel_dependencies:
+"rpm -i path/to/rhel_dependency"
+
+# To verify that the package was installed
+"rpm -q name_of_package"
+
