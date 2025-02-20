@@ -20,7 +20,7 @@ GREEN="\e[32m"
 RED="\e[31m"
 RESET="\e[0m"
 
-echo -e "[ + ] Installing PowerShell..."
+echo -e "\n[ + ] Installing PowerShell..."
 
 # Create directory and extract PowerShell quietly
 mkdir -p /opt/powershell
@@ -32,7 +32,7 @@ ln -sf /opt/powershell/pwsh /usr/bin/pwsh
 
 # Verify PowerShell installation
 if command -v pwsh &>/dev/null; then
-    echo -e "\n${GREEN}[ ✔ ]${RESET} PowerShell installed successfully!"
+    echo -e "\n${GREEN}[ ✔ ]${RESET} PowerShell installed successfully"
     echo -e "\n[ + ] PowerShell version: $(pwsh --version)"
     echo -e "\n[ + ] You can now execute PowerShell using: 'pwsh'"
 else
@@ -51,14 +51,13 @@ chmod +x /opt/Evaluate-STIG/Evaluate-STIG/Evaluate-STIG.ps1
 
 # Verify Evaluate-STIG proper extraction
 if [ -d /opt/Evaluate-STIG/Evaluate-STIG ]; then
-    echo -e "\n${GREEN}[ ✔ ]${RESET} Evaluate-STIG extracted successfully!"
+    echo -e "\n${GREEN}[ ✔ ]${RESET} Evaluate-STIG extracted successfully"
 else
-    echo -e "\n${RED}[ ✖ ]${RESET} Evaluate-STIG extraction failed!"
+    echo -e "\n${RED}[ ✖ ]${RESET} Evaluate-STIG extraction failed"
     exit 1
 fi
 
-
-echo -e "${GREEN}[ ✔ ]${RESET} Evaluate-STIG installed successfully in /opt/Evaluate-STIG!"
+echo -e "$\n{GREEN}[ ✔ ]${RESET} Evaluate-STIG installed successfully in /opt/Evaluate-STIG"
 
 # # Test prerequisites
 # echo -e "${GREEN}[ + ] Testing prerequisites...${RESET}"
