@@ -19,8 +19,8 @@ RESET="\e[0m"
 # Check if policies.json is in the current directory
 if [ ! -f ./policies.json ]; then
     # File doesn't exist, display message and exit with error status
-    echo -e "\n[ + ] The policies.json file is not in this directory"
-    echo -e "\n[ ! ] Please make sure the install script and the policies.json file are in the same directory"
+    echo -e "\n${RED}[ + ]${RESET} The policies.json file is not in this directory"
+    echo -e "\n${RED}[ + ]${RESET} Please make sure the install script and the policies.json file are in the same directory"
     exit 1
 fi
 
@@ -33,7 +33,7 @@ else
     mkdir -p /etc/firefox/policies
     chown root:root /etc/firefox/policies
     chmod 755 /etc/firefox/policies
-    echo -e "\n[ + ] directory created"
+    echo -e "\n${GREEN}[ + ]${RESET} directory created"
 fi
 
 echo "[ + ] Applying policies.json configuration file"
@@ -48,7 +48,7 @@ if [ -f /etc/firefox/policies/policies.json ]; then
                 cp ./policies.json /etc/firefox/policies/
                 chown root:root /etc/firefox/policies/policies.json
                 chmod 644 /etc/firefox/policies/policies.json
-                echo -e "\n[ + ] policies.json file has been overwritten."
+                echo -e "\n${GREEN}[ + ]${RESET} policies.json file has been overwritten."
                 echo -e "\n[ + ] Verify with firefox by typing 'about:policies' in the URL bar."
                 break
                 ;;
@@ -57,7 +57,7 @@ if [ -f /etc/firefox/policies/policies.json ]; then
                 break
                 ;;
             * ) 
-                echo -e "\n[ ! ] Invalid choice. Please enter 'y' or 'n'."
+                echo -e "\n${RED}[ + ]${RESET} Invalid choice. Please enter 'y' or 'n'."
                 ;;
         esac
     done
@@ -65,6 +65,6 @@ else
     cp ./policies.json /etc/firefox/policies/
     chown root:root /etc/firefox/policies/policies.json
     chmod 644 /etc/firefox/policies/policies.json
-    echo -e "\n[ + ] policies.json file has been created."
+    echo -e "\n${GREEN}[ + ]${RESET} policies.json file has been created."
     echo -e "\n[ + ] Verify with firefox by typing 'about:policies' in the URL bar."
 fi
