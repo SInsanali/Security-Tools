@@ -10,6 +10,10 @@
 ##################################################################################################
 ##################################################################################################
 
+# TODO: Cloudflare is blocking automated requests from this script. 
+# This happens because the site requires a browser-like request
+# (including cookies, headers, and possibly JavaScript checks) to pass the security challenge.
+
 # Define the base URL for ClamAV updates
 $baseUrl = "https://database.clamav.net"
 
