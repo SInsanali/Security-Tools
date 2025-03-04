@@ -33,10 +33,10 @@ else
     mkdir -p /etc/firefox/policies
     chown root:root /etc/firefox/policies
     chmod 755 /etc/firefox/policies
-    echo -e "\n${GREEN}[ + ]${RESET} directory created"
+    echo -e "\n${GREEN}[ + ]${RESET} /etc/firefox/policies directory created"
 fi
 
-echo "[ + ] Applying policies.json configuration file"
+echo "\n[ + ] Applying policies.json configuration file"
 
 if [ -f /etc/firefox/policies/policies.json ]; then
     # Input validation loop for yes/no (y/n) response
@@ -66,5 +66,5 @@ else
     chown root:root /etc/firefox/policies/policies.json
     chmod 644 /etc/firefox/policies/policies.json
     echo -e "\n${GREEN}[ + ]${RESET} policies.json file has been created."
-    echo -e "\n[ + ] Verify with firefox by typing 'about:policies' in the URL bar."
+    echo -e "\n[ ! ] Verify enterprise policies are enabled with firefox by typing 'about:policies' in the URL bar."
 fi
