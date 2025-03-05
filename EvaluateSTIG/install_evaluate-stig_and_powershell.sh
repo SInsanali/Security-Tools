@@ -12,8 +12,15 @@
 ###########################################################################################################################################
 ###########################################################################################################################################
 
-
 #!/bin/bash
+
+# TODO change order, verify extraction > chmod scripts > echo install success
+# Does not affect function, just a better logical flow
+
+# TODO If script is stopped, then exit cleanly
+
+# TODO Check if EvaluateSTIG is already installed/ prompt user to continue or exit
+# I've used try/except in Python, but need research functionality in BASH
 
 # Define colors for output
 GREEN="\e[32m"
@@ -57,7 +64,7 @@ else
     exit 1
 fi
 
-echo -e "$\n{GREEN}[ ✔ ]${RESET} Evaluate-STIG installed successfully in /opt/Evaluate-STIG"
+echo -e "\n${GREEN}[ ✔ ]${RESET} Evaluate-STIG installed successfully in /opt/Evaluate-STIG"
 
 # # Test prerequisites
 # echo -e "${GREEN}[ + ] Testing prerequisites...${RESET}"
