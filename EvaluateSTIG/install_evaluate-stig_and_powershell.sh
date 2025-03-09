@@ -109,6 +109,7 @@ if [ -d /opt/Evaluate-STIG ]; then
         read -r overwrite_answer
         case $overwrite_answer in
             [Yy]* )
+                rm -rf /opt/Evaluate-STIG # Remove existing Evaluate-STIG directory for clean install
                 install_eval_stig
                 break
                 ;;
@@ -127,8 +128,8 @@ fi
 
 # TODO: (Maybe)
 # if stat -c "%a %n" ps1 and sh files, echo script persission set and echo the 
-# Evaluate-STIG installed successfully in /opt/Evaluate-STIG line
-# else echo unable to set all permissions, please verify permissions as needed
+# Evaluate-STIG installed successfully in /opt/Evaluate-STIG line (below)
+# else, echo unable to set all permissions, please verify permissions as needed
 
 echo -e "\n${GREEN}[ + ]${RESET} Evaluate-STIG installed successfully in /opt/Evaluate-STIG"
 
