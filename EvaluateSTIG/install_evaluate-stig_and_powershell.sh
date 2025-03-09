@@ -54,7 +54,6 @@ install_eval_stig() {
     # Set script permissions
     echo -e "\n[ + ] Updating script permissions..."
     chmod 700 /opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/*.sh
-    chmod 700 /opt/Evaluate-STIG/Evaluate-STIG/Prerequisites/*.ps1
     chmod 700 /opt/Evaluate-STIG/Evaluate-STIG/*.sh
     chmod 700 /opt/Evaluate-STIG/Evaluate-STIG/*.ps1
 }
