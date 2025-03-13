@@ -72,3 +72,4 @@ else
     echo -e "\n[ ! ] Maybe it's located here?"
     find / -iname 'powershell' 2>/dev/null
 fi
+
