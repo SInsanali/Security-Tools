@@ -1,2 +1,2 @@
 # Security-Tools
-Various security tools || no proprietary information here
+Various security tools || no intellectual property or proprietary information here
